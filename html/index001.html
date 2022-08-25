@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos/style.css">
+    <title>ToDo Avançado</title>
+</head>
+<body>
+    <main>
+
+        <section> 
+            <h1> ToDo Avançado </h1>   
+            <div id="linha"></div>
+        
+        
+        </section>
+
+
+        <section id="adicionar">
+            
+        <h3> Adicione sua Tarefa </h3>
+        <input id="tarefa" type="text" placeholder="O que você vai fazer?">
+        <input type="submit" onclick="adicionar()" value="Enviar">
+        
+        
+        
+        </section>
+        <div id="linha2"></div>
+        
+        <section id="pesquisar"> 
+            <h3> <label for="pesquisa">Pesquisar:</label> </h3> 
+
+            <h3 id="filtroreal"> <label for="filtra">Filtrar:</label></h3> 
+            <br>
+            <input placeholder="Buscar..." size="15" type="text"> <input type="submit" value="Enviar">
+
+            <select name="filtro" id="filtra"> <option value="Todos"> Todos</option> </select>
+        
+        
+        </section>
+
+        <div id="resp">  </div>
+
+    </main>
+
+
+    <script src="interatividade/script.js"></script>
+</body>
+</html>
