@@ -5,8 +5,34 @@
     padding: 0px;
 }
 
+.hide {
+    display: none;
+}
+
+section#editar{
+    margin-left: 2em;
+    padding-bottom: 25px;
+    margin-right: 2em;
+    border-bottom: 1px solid #ddd;
+}
+
+section#editar h3{
+    font-family: 'Poppins';
+    padding-bottom: 4px;
+    font-size: 1.5em;
+    margin-left: 6px;
+}
+
+section#editar input{
+    font-size: 1.1em;
+    padding: 4px 13px;
+    margin: 6px 0px 6px 6px;
+}
+
+
+
 button:hover{
-    background-color: #102f5e;
+    background-color: rgb(194, 194, 194);
 }
 
 body{
@@ -18,6 +44,7 @@ body{
 main {
     width: 70%;
     padding: 1rem;
+    padding-bottom: 3rem;
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -35,23 +62,23 @@ section{
 
 h1 {
     font-size: 2.3em;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Poppins', sans-serif;
     margin-top: 0.8em;
     text-align: center;
+    margin-left: 1.3em;
+    padding-bottom: 20px;
+    margin-right: 1.3em;
+    border-bottom: 1px solid #ddd;
     
     
 }
 
-#linha{
-    margin: auto;
-    margin-top: 20px;
-    width: 84%;
-    height: 2px;
-    background-color: rgba(167, 165, 165, 0.199);
-}
 
 section#adicionar{
-    margin-left: 3em;
+    margin-left: 2em;
+    padding-bottom: 35px;
+    margin-right: 3em;
+    border-bottom: 1px solid #ddd;
     
 }
 
@@ -65,14 +92,7 @@ section#adicionar input{
     font-size: 1.1em;
 }
 
-#linha2{
-    margin: auto;
-    margin-top: 0px;
-    margin-bottom: 25px;
-    width: 84%;
-    height: 2px;
-    background-color: rgba(167, 165, 165, 0.199);
-}
+
 
 section#pesquisar{
     margin-left: 1.7em;
@@ -152,11 +172,11 @@ div#resp p {
 
 
 /* config das tarefas ja feitas */
-.check{
+div.done {
     background-color: #395169;
 }
 
-.check p {
+.done h3 {
     color: #fff;
     text-decoration: line-through;
     font-style: italic;
@@ -217,24 +237,11 @@ div#resp p {
         margin-left: 2.3em;
     }
 
-    div#resp .check{
-        padding: 15px;
-        padding-top: 5px;
-        padding-bottom: 5px;
+    section#editar{
+        margin-left: 4em;
+        margin-right: 4em;
     }
-
-    div#resp a#editar{
-        padding: 15px;
-        padding-top: 3px;
-        padding-bottom: 3px;
-    }
-
-    div#resp .excluir{
-        padding: 15px;
-        padding-top: 5px;
-        padding-bottom: 5px;
-    }
-    
+ 
     
     
 

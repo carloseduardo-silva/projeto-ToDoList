@@ -16,9 +16,6 @@
 
         <section> 
             <h1> ToDo Avançado </h1>   
-            <div id="linha"></div>
-            
-        
         </section>
 
 
@@ -27,11 +24,13 @@
         <h3> Adicione sua Tarefa </h3>
         <input id="tarefa" type="text" placeholder="O que você vai fazer?">
         <input type="submit" onclick="adicionar()" value="Enviar">
-        
-        
-        
         </section>
-        <div id="linha2"></div>
+        
+        <section class="hide" id="editar">
+            <h3> Edite sua Tarefa:</h3>
+            <input id="iptedit" type="text"> <input type="button" value="✎"> <br>
+            <input id="cancel" type="button" value="Cancelar">
+        </section>
         
         <section id="pesquisar"> 
             <h3> <label for="pesquisa">Pesquisar:</label> </h3> 
@@ -46,11 +45,10 @@
                 <option value="done"> Feito </option>
             
             </select>
-        
-        
         </section>
 
-        <div id="resp">  </div>
+        <div id="resp">   </div>
+
 
     </main>
 
