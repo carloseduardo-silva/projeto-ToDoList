@@ -5,7 +5,10 @@ const todoList = document.querySelector('div#resp')
 const cancelEditBtn = document.querySelector('section#editar input#cancel')
 const todoForm = document.querySelector('section#adicionar')
 const editar = document.querySelector('section#editar')
-const editInput = document.querySelector('section#editar input#iptedit')
+const editInput = document.querySelector('#iptedit')
+const editButton = document.querySelector('#editbtn')
+
+
 
 let oldInputValue;
 
@@ -70,9 +73,27 @@ function toggleForms() {
 
 }
 
+const uptadeTodo = (editInputValue) =>  {
+
+    const todos = document.querySelectorAll('.todo')
+    
+    todos.forEach((todo) => {
+
+        let todoTitle = todo.querySelector('h3')
+
+        if (todoTitle.innerText === oldInputValue) {
+            todoTitle.innerText = editInputValue};
+    });
+ 
+}
+
+
+
+
 
 /* 1 - utilização do Toggle = muito util, pois ao ser utilizado em eventos de click e entre outros, ele possui a versatilidade de aplicar e desaplicar uma function.
    2- logo abaixo esta a config das functions dos 3 botões do ToDo List -> CHECKED, EXCLUDE, EDIT.
+   3- eventos os quais irão causar a mudança de classes, permitindo ou não á alteração devido ao diferentes CSS da class.
 */
 
 document.addEventListener('click', (e) => {
@@ -82,7 +103,7 @@ document.addEventListener('click', (e) => {
     let todoTitle;
 
     if(parentEl && parentEl.querySelector('h3')) {
-        todoTitle = parentEl.querySelector('h3').innerHTML;
+        todoTitle = parentEl.querySelector('h3').innerText || "";
     }
     
     if (targetEl.classList.contains('finish-todo')){
@@ -97,13 +118,15 @@ document.addEventListener('click', (e) => {
         toggleForms();
 
         /* Salvamento (para apresentar ele no input da tela de edição) e mapeamento do valor h3/titulo a ser editado */
-        editInput.value = todoTitle
-        oldInputValue.value = todoTitle
+        editInput.value = todoTitle;
+        oldInputValue = todoTitle;
     }
     
 })
 
-/* desaplica as classes hide da function toggleforms, por meio da reaplicação dela permitida pelo metodo .Toggle() */
+/* desaplica as classes hide da function toggleforms, por meio da reaplicação dela permitida pelo metodo .Toggle()
+vulgo Botao de cancelar a edição 
+ */
 cancelEditBtn.addEventListener('click', (e) => {
     e.preventDefault();
     
@@ -111,6 +134,18 @@ cancelEditBtn.addEventListener('click', (e) => {
 })
 
 
+editar.addEventListener('submit', (e) => {
+    
+    e.preventDefault()
+
+    const editInputValue = editInput.value
+
+    if(editInputValue) {
+        uptadeTodo(editInputValue)
+    }
+
+    toggleForms();
+})
 
 
 
